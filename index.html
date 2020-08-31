@@ -1,111 +1,114 @@
-<html><head>
-    <title>Start</title>
-  
-    <style>
-      html {
-        align-items: center;
-        color: #f9f9f9;
-        background-color: #262626;
-        display: flex;
-        font: 22px "Courier New", Courier, monospace;
-        height: 100%;
-        justify-content: center;
-        margin: 0;
-      }
-  
-      body {
-        display: flex;
-        margin: 1em;
-        padding: 1em;
-      }
-  
-      h1 {
-        font-size: 2em;
-        grid-column: 1 / -1;
-        margin: 0;
-        text-align: center;
-        color: #f24747;
-      }
-  
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-  
-      a:focus,
-      a:hover {
-        color: #009467;
-      }
-  
-      nav {
-        display: grid;
-        grid-row-gap: 1em;
-        grid-template-columns: 1fr 1fr;
-        margin: 0 1em;
-        min-width: 24em;
-        padding: 1em 0;
-      }
-  
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        white-space: nowrap;
-      }
-  
-      li:first-child {
-        font-weight: bold;
-        line-height: 2em;
-        color: #cc8500;
-      }
-  
-      img {
-        height: auto;
-        object-fit: cover;
-        object-position: 50% 100%;
-        width: 12em;
-      }
+<!DOCTYPE html>
+<!--Starpage by -->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>~</title>
+	<link rel="stylesheet" style="text/css" href="general.css" />
+</head>
+<!-- in case i add more gifs, don't forget to add the code for them -->
+<body>
+	<div class="main" style="display: block">
+		<div class="image-wrapper">
 
-    </style>
-  </head>
-  <body>
-    <nav>
-      <h1>/home/michael/</h1>
-      <ul>
-        <li>~/entertainment</li>
-        <li><a href="https://netflix.com/">/netflix</a></li>
-        <li><a href="https://twitch.tv/">/twitch</a></li>
-        <li><a href="https://crunchyroll.com/">/crunchyroll</a></li>
-        <li><a href="https://youtube.com/">/youtube</a></li>
-      </ul>
-  
-      <ul>
-        <li>~/coding</li>
-        <li><a href="https://github.com/">/github</a></li>
-        <li><a href="https://gitlab.com/">/gitlab</a></li>
-        <li><a href="https://stackoverflow.com/">/stackoverflow</a></li>
-        <li><a href="https://devhints.io/">/devhints</a></li>
-      </ul>
-  
-      <ul>
-        <li>~/social_media</li>
-        <li><a href="https://reddit.com/">/reddit</a></li>
-        <li><a href="https://4chan.com/">/4chan</a></li>
-        <li><a href="https://twitter.com/">/twitter</a></li>
-        <li><a href="https://discord.gg/">/discord</a></li>
-        
-      </ul>
-  
-      <ul>
-        <li>~/productivity</li>
-        <li><a href="https://outlook.com/">/outlook</a></li>
-        <li><a href="https://gmail.com/inbox">/gmail</a></li>
-        <li><a href="https://to-do.live.com/tasks/">/to-do</a></li>
-        <li><a href="https://pomofocus.io/">/pomodoro</a></li>
-      </ul>
-    </nav>
-  
-    <img src="src/test-pic.png">
-  
-  
-  </body></html>
+			<div class="mySlides fade">
+				<img src="img/side1.gif">
+			</div>
+
+			<div class="mySlides fade">
+				<img src="img/side2.gif">
+			</div>
+
+			<div class="mySlides fade">
+				<img src="img/side3.gif">
+			</div>
+
+			<div class="mySlides fade">
+				<img src="img/side4.gif">
+			</div>
+
+			<a class="next" onclick="plusSlides(1)">&#8734;</a>
+		</div>
+		<br>
+		<div style="text-align:center">
+			<span class="reqdVar" onclick="currentSlide(1)"></span>
+			<span class="reqdVar" onclick="currentSlide(2)"></span>
+			<span class="reqdVar" onclick="currentSlide(3)"></span>
+			<span class="reqdVar" onclick="currentSlide(4)"></span>
+		</div>
+
+		<header>
+			<br>
+			<h1>ようこそ, <span class="flair">マイケル</span></h1>
+		</header>
+
+		<nav>
+			<br> 
+			<ul class="blue">
+				<a style="font-size:22px">Social</a>
+        <li><a href="https://twitter.com/">Twitter</a></li>
+        <li><a href="https://reddit.com/">Reddit</a></li>
+			</ul>
+		</nav>
+
+		<div class="codes" id="codes">
+			<script>
+			function updateClock() {
+				var days = ['MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY', 'SUNDAY'];
+				var m = new Date();
+				var dateString =
+				(days[ m.getDay() ]) + " " +
+				("0" + m.getDate()).slice(-2) + "/" +
+				("0" + (m.getMonth()+1)).slice(-2) +"/"+
+				m.getFullYear() +" "+
+				("0" + m.getHours()).slice(-2) + ":" +
+				("0" + m.getMinutes()).slice(-2) + ":" +
+				("0" + m.getSeconds()).slice(-2);
+				document.getElementById('codes').innerHTML = dateString;
+
+				// call this function again in 1337ms
+				setTimeout(updateClock, 1337);
+			}
+			updateClock();
+
+			var slideIx = Number(localStorage.getItem('slideIndex') || 1);
+
+			var slideIndex = slideIx;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+				showSlides(slideIndex += n);
+				localStorage.setItem('slideIndex', slideIndex);
+				console.log(localStorage.getItem('slideIndex'));
+			}
+
+			function currentSlides(n) {
+				showSlides(slideIndex = n);
+				localStorage.setItem('slideIndex', slideIndex);
+				console.log(localStorage.getItem('slideIndex'));
+			}
+			
+			function showSlides(n) {
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var reqdVars = document.getElementsByClassName("reqdVar");
+				if (n > slides.length) {
+					slideIndex = 1;
+				}
+				if (n < 1) {
+					slideIndex = slides.length;
+				}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+				for (i = 0; i < reqdVars.length; i++) {
+					reqdVars[i].className = reqdVars[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block";
+				reqdVars[slideIndex-1].className += " active";
+			}
+
+			</script>
+		</div>
+	</body>
+	</html>
