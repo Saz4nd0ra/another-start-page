@@ -86,8 +86,8 @@
 				("0" + m.getSeconds()).slice(-2);
 				document.getElementById('codes').innerHTML = dateString;
 
-				// call this function again in 1337ms
-				setTimeout(updateClock, 1337);
+				// call this function again in 1000ms
+				setTimeout(updateClock, 1000);
 			}
 			updateClock();
 
