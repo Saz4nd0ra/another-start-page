@@ -167,22 +167,7 @@ ul > li > a {
   transition: all 0.8s;
 }
 
-ul[class=green] > li > a:hover {
-  color: #4FAE0F;
-  transition: all 0.5s;
-}
-
-ul[class=blue] > li > a:hover {
-  color: #0972D6;
-  transition: all 0.5s;
-}
-
 ul[class=red] > li > a:hover {
   color: #ed3434;
-  transition: all 0.5s;
-}
-
-ul[class=yellow] > li > a:hover {
-  color: #edd934;
   transition: all 0.5s;
 }
