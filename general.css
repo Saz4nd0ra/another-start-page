@@ -6,7 +6,7 @@
 body {
   font-family: 'Iosevka', monospace;
   font-size: 20px;
-  background-color: #282828;
+  background-color: #333333;
   background-image: url("img/");
   background-repeat: repeat;
   width: 970px;
@@ -28,7 +28,7 @@ h1 {
 }
 
 .flair {
-  color: #d44242;
+  color: #25dadd;
 }
 
 .main {
