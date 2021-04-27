@@ -1,142 +1,56 @@
 <!DOCTYPE html>
-<!--Starpage by -->
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>~</title>
-	<link rel="stylesheet" style="text/css" href="general.css" />
-</head>
-<!-- in case i add more gifs, don't forget to add the code for them -->
-<body>
-	<div class="main" style="display: block">
-		<div class="image-wrapper">
-
-			<div class="mySlides fade">
-				<img src="img/side1.gif">
-			</div>
-
-			<div class="mySlides fade">
-				<img src="img/side2.gif">
-			</div>
-
-			<div class="mySlides fade">
-				<img src="img/side3.gif">
-			</div>
-
-			<div class="mySlides fade">
-				<img src="img/side4.gif">
-			</div>
-
-			<a class="next" onclick="plusSlides(1)">&#8734;</a>
-		</div>
-		<br>
-		<div style="text-align:center">
-			<span class="reqdVar" onclick="currentSlide(1)"></span>
-			<span class="reqdVar" onclick="currentSlide(2)"></span>
-			<span class="reqdVar" onclick="currentSlide(3)"></span>
-			<span class="reqdVar" onclick="currentSlide(4)"></span>
-		</div>
-
-		<header>
-			<br>
-			<h1>Welcome, <span class="flair">Michael</span></h1>
-		</header>
-
-		<nav>
-			<br> 
-			<ul class="red">
-				<a style="font-size:22px">Social</a>
-        	<li><a href="https://twitter.com/">Twitter</a></li>
-		<li><a href="https://reddit.com/">Reddit</a></li>
-		<li><a href="https://discord.com/channels/@me">Discord</a></li>
-			</ul>
-			<ul class="red">
-				<a style="font-size:22px">Coding</a>
-        	<li><a href="https://github.com/">GitHub</a></li>
-		<li><a href="https://gitlab.com/">GitLab</a></li>
-		<li><a href="https://stackoverflow.com/">Stackoverflow</a></li>
-		<li><a href="https://cloud.mongodb.com/v2/">MongoDB Atlas</a></li>		
-			</ul>
-			<ul class="red">
-				<a style="font-size:22px">Entertainment</a>
-        	<li><a href="https://youtube.com/">Youtube</a></li>
-		<li><a href="https://crunchyroll.com/">Crunchyroll</a></li>
-		<li><a href="https://netflix.com/">Netflix</a></li>
-		<li><a href="https://www.twitch.tv/">Twitch</a></li>
-			</ul>
-			<ul class="red">
-				<a style="font-size:22px">Productivity</a>
-        	<li><a href="https://beta.protonmail.com/u/0/">ProtonMail</a></li>
-		<li><a href="https://calendar.protonmail.com/u/0/">ProtonCalendar</a></li>
-		<li><a href="https://de.overleaf.com/">Overleaf</a></li>
-		<li><a href="https://to-do.live.com/tasks/">To Do</a></li>
-			</ul>
-			<ul class="red">
-				<a style="font-size:22px">University</a>
-        	<li><a href="https://tiss.tuwien.ac.at/">TISS</a></li>
-		<li><a href="https://tuwel.tuwien.ac.at/my/">TUWEL</a></li>
-		<li><a href="https://tuwien2020.github.io/tgi-pages/#/">TGI Pages</a></li>
-			</ul>
-		</nav>
-
-		<div class="codes" id="codes">
-			<script>
-			function updateClock() {
-				var days = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
-				var m = new Date();
-				var dateString =
-				(days[ m.getDay() ]) + " " +
-				("0" + m.getDate()).slice(-2) + "/" +
-				("0" + (m.getMonth()+1)).slice(-2) +"/"+
-				m.getFullYear() +" "+
-				("0" + m.getHours()).slice(-2) + ":" +
-				("0" + m.getMinutes()).slice(-2) + ":" +
-				("0" + m.getSeconds()).slice(-2);
-				document.getElementById('codes').innerHTML = dateString;
-
-				// call this function again in 1000ms
-				setTimeout(updateClock, 1000);
-			}
-			updateClock();
-
-			var slideIx = Number(localStorage.getItem('slideIndex') || 1);
-
-			var slideIndex = slideIx;
-			showSlides(slideIndex);
-
-			function plusSlides(n) {
-				showSlides(slideIndex += n);
-				localStorage.setItem('slideIndex', slideIndex);
-				console.log(localStorage.getItem('slideIndex'));
-			}
-
-			function currentSlides(n) {
-				showSlides(slideIndex = n);
-				localStorage.setItem('slideIndex', slideIndex);
-				console.log(localStorage.getItem('slideIndex'));
-			}
-			
-			function showSlides(n) {
-				var i;
-				var slides = document.getElementsByClassName("mySlides");
-				var reqdVars = document.getElementsByClassName("reqdVar");
-				if (n > slides.length) {
-					slideIndex = 1;
-				}
-				if (n < 1) {
-					slideIndex = slides.length;
-				}
-				for (i = 0; i < slides.length; i++) {
-					slides[i].style.display = "none";
-				}
-				for (i = 0; i < reqdVars.length; i++) {
-					reqdVars[i].className = reqdVars[i].className.replace(" active", "");
-				}
-				slides[slideIndex-1].style.display = "block";
-				reqdVars[slideIndex-1].className += " active";
-			}
-
-			</script>
-		</div>
-	</body>
-	</html>
+<html lang="en-GB">
+  <head>
+    <title>New Tab</title>
+    <meta charset="utf-8" />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="./assets/css/style.css"
+      media="screen, projection"
+    />
+    <script src="./assets/js/iconify.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <main id="container" class="fade">
+      <section id="header">
+        <h1 id="header-time">00:00</h1>
+        <h2 id="header-date">Date</h2>
+        <div>Welcome, Michael!</div>
+      </section>
+      <br />
+      <br />
+      <div id="searchBox">
+        <input
+          id="searchbar"
+          autocomplete="off"
+          type="text"
+          title="Search"
+          autofocus
+          onkeydown="search(event)"
+          placeholder="search..."
+        />
+      </div>
+      <br />
+      <section id="apps">
+        <h3>> Bookmarks</h3>
+        <div id="apps-container">
+          <a
+            class="apps-item"
+            style="--bg-hover: #458588"
+            href="https://wiki.archlinux.org/"
+          >
+            <div class="apps-icon">
+              <span class="iconify icon" data-icon="mdi:arch"> </span>
+            </div>
+            <div class="apps-text">
+              <span>ArchLinux</span>
+              <span>wiki.archlinux.org</span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+    <script src="./assets/js/script.js" type="text/javascript"></script>
+  </body>
+</html>
