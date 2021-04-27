@@ -1,9 +1,10 @@
 :root {
     --color-theme: #2978ad;
     --bg-primary: #212121;
-    --bg-secondary: #282828;
-    --bg-hover: rgba(41, 120, 173, .5);
-    --color-primary: #ebdbb2;
+    --bg-secondary: #262626;
+    --bg-hover: rgba(252, 113, 113, 0.5);
+    --color-title: #242424;
+    --color-primary: #eeeeee;
     --padding: 1rem;
     --rounded: 0.45rem;
     --shadow: 0 1px 3px rgba(0, 0, 0, .06), 0 1px 2px rgba(0, 0, 0, .12)
@@ -19,7 +20,7 @@
 }
 
 html {
-    color: var(--color-primary);
+    color: var(--color-title);
     background: var(--bg-primary);
     background-image: url("./background.png");
 }
@@ -43,7 +44,7 @@ h1, h2 {
 h3, h4 {
     text-transform: uppercase;
     text-align: left;
-    color: var(--color-primary);
+    color: var(--color-title);
 }
 
 h1 {
@@ -65,7 +66,7 @@ h3 {
     display: grid;
     grid-column-gap: 0;
     grid-row-gap: 0;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 #apps-container a {
