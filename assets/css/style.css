@@ -1,9 +1,9 @@
 :root {
     --color-theme: #2978ad;
-    --bg-primary: #212121;
-    --bg-secondary: #262626;
+    --bg-primary: #ffffff;
+    --bg-secondary: #14161B;
     --bg-hover: rgba(252, 113, 113, 0.5);
-    --color-title: #242424;
+    --color-title: #eeeeee;
     --color-primary: #eeeeee;
     --padding: 1rem;
     --rounded: 0.45rem;
