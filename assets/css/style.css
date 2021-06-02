@@ -1,9 +1,9 @@
 :root {
-    --color-theme: #2978ad;
+    --color-theme: #e45b5b;
     --bg-primary: #ffffff;
-    --bg-secondary: #14161B;
+    --bg-secondary: #282828;
     --bg-hover: rgba(252, 113, 113, 0.5);
-    --color-title: #eeeeee;
+    --color-title: #282828;
     --color-primary: #eeeeee;
     --padding: 1rem;
     --rounded: 0.45rem;
@@ -23,6 +23,7 @@ html {
     color: var(--color-title);
     background: var(--bg-primary);
     background-image: url("./background.png");
+    background-size: auto;
 }
 
 body {
@@ -60,6 +61,7 @@ h3 {
 
 #header {
     text-align: center;
+    color: var(--color-title)
 }
 
 #apps-container {
@@ -125,36 +127,4 @@ h3 {
     color: var(--bg-hover);
     font-size: 0.8em;
     text-transform: lowercase;
-}
-
-#searchBox{
-    margin:0 auto;
-    width:400px;
-    height: 32px;
-    border-radius: var(--rounded);
-    background-color: var(--bg-primary);
-    transition: box-shadow .5s;
-}
-
-#searchBox:hover{
-    box-shadow: 0px 0px 8px 1px var(--color-primary);
-}
-
-#searchBox:focus-within{
-    box-shadow: 0px 0px 8px 1px var(--color-primary);
-    outline:none;
-}
-
-#searchbar{
-    height:32px;
-    border: none;
-    width:95%;
-    margin-left: 10px;
-    font-size:16px;
-    outline: none;
-    background: none;
-
-    font-size: 10pt;
-    font-style: italic;
-    color: var(--color-primary);
 }
